@@ -82,7 +82,7 @@ def generate_launch_description():
             description=('Navigation LiDAR model: s3 = RPLIDAR S3 (OpenAMRobot 2.0), '
                          'a1 = RPLIDAR A1, legacy (existing robot). Default a1 until the S3 '
                          'is mounted.')),
-        # micro-ROS agent: bridges the Teensy (/cmd_vel, /odom/unfiltered, /imu/data).
+        # micro-ROS agent: bridges the Teensy (/cmd_vel, /odom/unfiltered, /imu/data_raw).
         ExecuteProcess(
             cmd=['ros2', 'run', 'micro_ros_agent', 'micro_ros_agent',
                  'serial', '-b', '115200', '-D', teensy],
